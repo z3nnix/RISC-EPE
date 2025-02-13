@@ -1,0 +1,42 @@
+select "std"
+select "types"
+
+memory = []
+stack = []
+pc = 0  // Program Counter
+
+func load(program) {
+    memory = program
+    pc = 0
+
+    echo(":: Loaded program: " + program)
+}
+
+func run() {
+    echo(":: Start running the program\n")
+    while pc < length(memory) {
+        instruction = memory[pc]
+        
+        execute(instruction)
+        pc++
+    }
+
+    echo("\n:: Finished running the program")
+}
+
+func execute(instruction) {
+    if instruction == "PRINT" {
+        echo(":: Insruction - " + instruction)
+        echo("ARTYOM — GOIDA")
+    } else {
+        echo("[X] Unknown instruction: " + instruction)
+    }
+}
+
+func main() {
+    program = ["PUSH", "PUSH", "ADD", "PRINT"]
+    load(program)
+    run()
+}
+
+main()
