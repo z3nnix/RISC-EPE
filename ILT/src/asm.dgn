@@ -1,0 +1,8 @@
+func execute(instruction) {
+    if instruction == "WRITE" {
+        echo(":: Instruction - " + instruction)
+        echo("ARTYOM — GOIDA")
+    } else {
+        echo("[X] Unknown instruction: " + instruction)
+    }
+}

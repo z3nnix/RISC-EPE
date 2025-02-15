@@ -1,5 +1,7 @@
 select "std"
 select "types"
+select "files"
+include "src/asm.dgn"
 
 memory = []
 stack = []
@@ -24,16 +26,17 @@ func run() {
     echo("\n:: Finished running the program")
 }
 
-func execute(instruction) {
-    if instruction == "PRINT" {
-        echo(":: Insruction - " + instruction)
-        echo("ARTYOM — GOIDA")
-    } else {
-        echo("[X] Unknown instruction: " + instruction)
-    }
-}
-
 func main() {
+    // asmfile = fopen("sandbox.asm", mode = "r") 
+    // if (asmfile == null) {
+    //     echo("Ошибка: Не удалось открыть файл 'sandbox.asm'")
+    //     exit()
+    // }
+
+    // content = readText(asmfile)
+    // showln(content)
+    // fclose(asmfile)
+    
     program = ["PUSH", "PUSH", "ADD", "PRINT"]
     load(program)
     run()

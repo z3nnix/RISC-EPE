@@ -4,3 +4,8 @@ Here are all the changes in RISC-EPE:
 - Project initiation
 - Implementation of run() and load() functions
 - execute() workpiece
+
+## Day 2:
+- Update project structure
+- Written an asm syntax template
+- Write dragon installer for Debian / Debian based OS
